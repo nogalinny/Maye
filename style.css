@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+body {
+  background-color: #f8f0ff; /* lilás bem claro */
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  padding: 50px;
+  color: #5c5470;
+  margin: 0;
+}
+
+h1 {
+  font-family: 'Dancing Script', cursive;
+  font-weight: normal;
+  font-size: 36px;
+  color: #9f8ab6;
+  margin-bottom: 20px;
+}
+
+#titulo-substituto h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 48px;
+  color: #9f8ab6;
+  margin-top: 0;
+}
+
+p {
+  max-width: 600px;
+  margin: 10px auto;
+  line-height: 1.7;
+  font-size: 16px;
+  color: #5c5470;
+}
+
+#envelope {
+  font-size: 40px;
+  cursor: pointer;
+  margin: 40px auto;
+  user-select: none;
+  transition: transform 0.3s;
+  color: #c084fc;
+}
+
+#envelope:hover {
+  transform: scale(1.2);
+  color: #b37fe6;
+}
+
+#musica-container {
+  margin-top: 10px;
+  color: #a883d9;
+  font-size: 16px;
+}
+
+#player-spotify {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  color: #a155b9;
+  font-family: 'Dancing Script', cursive;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+#btn-play-pause {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s;
+}
+
+#btn-play-pause svg {
+  stroke: #8e7cc3;
+  transition: stroke 0.3s, transform 0.3s;
+}
+
+#btn-play-pause:hover svg {
+  stroke: #bda9e2;
+  transform: scale(1.1);
+}
+
+#nome-musica {
+  font-family: 'Dancing Script', cursive;
+  font-size: 20px;
+  color: #9f8ab6;
+  margin-left: 8px;
+}
+
+#carrossel {
+  margin-top: 30px;
+}
+
+#carrossel img {
+  max-width: 90%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid #b799ff;
+}
+
+#carta {
+  max-width: 700px;
+  background: #f0e9fc;
+  border: 1px solid #cdb4db;
+  margin: 30px auto;
+  padding: 30px;
+  border-radius: 10px;
+  font-size: 16px;
+  text-align: justify;
+  color: #5c5470;
+}
+
+#carta p {
+  text-align: justify;
+  color: #5c5470;
+  margin-top: 15px;
+}
+
+#carta p.assinatura {
+  text-align: right;
+  font-style: italic;
+  color: #b799ff;
+  margin-top: 30px;
+}
+
+button#fechar,
+button#voltar,
+#carrossel button {
+  margin-top: 20px;
+  background-color: transparent;
+  color: #a155b9;
+  border: 1px solid #a155b9;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+button#fechar:hover,
+button#voltar:hover,
+#carrossel button:hover {
+  background-color: #d5bfff;
+  color: #4a3b63;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Animação dos corações */
+.heart {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  color: #d5bfff;
+  font-size: 20px;
+  animation: subir 4s linear forwards;
+  pointer-events: none;
+}
+
+.heart::before {
+  content: "💜";
+}
+
+@keyframes subir {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+}
+
+button,
+#voltar-inicio {
+  background-color: transparent;
+  color: #a155b9;
+  border: 1px solid #a155b9;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+button:hover,
+#voltar-inicio:hover {
+  background-color: #e9d5ff;
+  color: #4a3b63;
+}
+
+#versiculo {
+  max-width: 700px;
+  margin: 30px auto;
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 10px;
+  color: #5c5470;
+  font-size: 20px;
+  line-height: 1.8;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  box-sizing: border-box;
+}
+
+#versiculo p {
+  margin: 12px 0;
+}
+
+#versiculo .versiculo-referencia {
+  font-style: italic;
+  color: #b799ff;
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+#compartilhando {
+  margin: 20px auto;
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  color: #9f8ab6;
+}
+
+.texto-compartilhando {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.data-compartilhamento {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  color: #9f8ab6;
+}
+
+.data-compartilhamento svg {
+  stroke: #c084fc;
+}
+
+.data-texto {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#foto-versiculo {
+  margin: 30px auto 20px;
+  text-align: center;
+}
+
+#foto-versiculo img {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  margin: 10px auto;
+  display: block;
+  border-radius: 10px;
+  border: 1px solid #d5bfff;
+}
+
+.hidden {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.hidden:not(.hidden) {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+h1, #titulo-substituto h1, #nome-musica {
+  text-shadow: 0 0 6px #d5bfff, 0 0 10px #cdb4db;
+}
+
+button, #voltar-inicio, button#fechar, button#voltar, #carrossel button {
+  box-shadow: 0 0 8px #d5bfff88;
+  transition: box-shadow 0.3s, background-color 0.3s, color 0.3s;
+}
+
+button:hover, #voltar-inicio:hover, button#fechar:hover, button#voltar:hover, #carrossel button:hover {
+  box-shadow: 0 0 15px #d5bfffdc;
+  background-color: #e5d0ff;
+  color: #4a3b63;
+}
+
+#envelope {
+  filter: drop-shadow(0 0 5px #c084fccc);
+  transition: filter 0.3s, transform 0.3s;
+}
+
+#envelope:hover {
+  filter: drop-shadow(0 0 12px #b37fe6);
+  transform: scale(1.2);
+}
+
+.heart {
+  text-shadow: 0 0 8px #d5bfff;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  p, #carta, #versiculo {
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: 100%;
+  }
+}
